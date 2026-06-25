@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beyond the Next-Gen Firewall - Webinar by OPNsense & Zenarmor</title>
+<meta name="description" content="Extending Security Beyond the Perimeter with OPNsense + Zenarmor. Joint webinar with Thomas Krenn." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+  @theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --color-navy-50: #eef0fb;
+    --color-navy-100: #d4d9f3;
+    --color-navy-500: #2a31a0;
+    --color-navy-700: #151b75;
+    --color-navy-800: #0d1259;
+    --color-navy-900: #0a0f4f;
+    --color-orange-50: #fff4e5;
+    --color-orange-100: #ffe1bf;
+    --color-orange-500: #ff8b00;
+    --color-orange-600: #e67a00;
+    --color-orange-700: #b35f00;
+  }
+</style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.01em; }
+  h1, h2, h3 { letter-spacing: -0.025em; }
+  /* Subtle play button pulse for the video thumbnail */
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+  .play-pulse::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    animation: pulse-ring 2s ease-out infinite;
+  }
+</style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- NAV -->
+<header class="border-b border-slate-100">
+  <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="images/zenarmor-logo-type-basic.png" alt="Zenarmor" class="h-7 w-auto" />
+    </div>
+    <a href="https://dash.zenarmor.com/firewalls/register/new-user" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition shadow-sm">Start Your Free Trial</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="px-6 pt-20 pb-10">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-base font-bold tracking-wider uppercase text-orange-500 mb-5">On-Demand Webinar</p>
+    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+      Beyond the Next-Gen Firewall:<br />
+      <span class="bg-gradient-to-r from-slate-900 via-[#0057FF] to-[#F2AA55] bg-clip-text text-transparent">Extending Security<br />Beyond the Perimeter.</span>
+    </h1>
+    <div class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-8 space-y-4">
+      <p>A joint informative session with Thomas Krenn and Zenarmor exploring how to secure modern hybrid and remote work environments. Discover how to build a full network security stack on the OPNsense infrastructure you already operate.</p>
+    </div>
+    <a href="#register" class="inline-flex items-center px-7 py-3.5 rounded-xl bg-navy-900 text-white font-medium hover:bg-navy-800 transition shadow-sm">Watch Now</a>
+  </div>
+</section>
+
+<!-- VIDEO PREVIEW THUMBNAIL -->
+<section class="px-6 pb-16">
+  <div class="max-w-4xl mx-auto">
+    <!-- 
+      ========================================================================
+      VIDEO THUMBNAIL PLACEHOLDER
+      Replace the inner content of this div with an <img> tag pointing to
+      your YouTube thumbnail / webinar preview image. Keep the outer wrapper
+      and play-button overlay for the visual effect.
+      Example:
+        <img src="images/webinar-thumbnail.jpg" alt="..." class="w-full h-full object-cover" />
+      ========================================================================
+    -->
+    <a href="#register" class="group block relative aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-slate-100 bg-gradient-to-br from-navy-900 via-navy-800 to-[#0057FF]/60 cursor-pointer">
+      <!-- Replace this gradient background with your thumbnail image -->
+      <div class="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/70 to-[#0057FF]/40 group-hover:from-navy-900/80 group-hover:via-navy-800/60 group-hover:to-[#0057FF]/30 transition-all duration-500"></div>
+      
+      <!-- Webinar info overlay -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-white">
+        <!-- Play button with pulse -->
+        <div class="relative w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
+          <div class="play-pulse absolute inset-0 rounded-full"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <p class="text-sm font-semibold tracking-wider uppercase text-white/70">Watch the Full Webinar</p>
+        <p class="text-xs text-white/50 mt-1">[Thumbnail image placeholder — drop your preview image here]</p>
+      </div>
+    </a>
+    <!-- ======================================================================== -->
+  </div>
+</section>
+
+<!-- TRIAL CTA STRIP -->
+<section class="px-6 py-12 bg-orange-500 text-white text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Ready to secure your network?</h2>
+    <a href="https://dash.zenarmor.com/firewalls/register/new-user" class="inline-flex items-center px-8 py-3.5 rounded-xl bg-white text-navy-900 font-semibold hover:bg-orange-50 transition shadow-sm">Start Your Free Trial</a>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="px-6 py-24 bg-slate-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-semibold text-center text-slate-900 mb-4">What You'll Learn</h2>
+    <p class="text-center text-slate-600 max-w-2xl mx-auto mb-14">From the challenges of perimeter-only security to real-world deployment scenarios — five key topics covered in this session.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-orange-500/50 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">1</div>
+        <h3 class="font-semibold text-slate-900 text-lg mb-2">The Perimeter Problem</h3>
+        <p class="text-slate-600">Why traditional perimeter-based firewalls and legacy VPNs fall short for remote and hybrid work requirements.</p>
+      </div>
+      <div class="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-orange-500/50 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">2</div>
+        <h3 class="font-semibold text-slate-900 text-lg mb-2">The Zenarmor Way</h3>
+        <p class="text-slate-600">How to effectively extend enterprise-grade network security beyond the perimeter.</p>
+      </div>
+      <div class="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-orange-500/50 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">3</div>
+        <h3 class="font-semibold text-slate-900 text-lg mb-2">Deployment Scenarios</h3>
+        <p class="text-slate-600">Explore real-world setups including Endpoint-only, Gateway/CPE, Cloud/Virtual, IoT/OT, and Hybrid models.</p>
+      </div>
+      <div class="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-orange-500/50 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">4</div>
+        <h3 class="font-semibold text-slate-900 text-lg mb-2">Data Sovereignty</h3>
+        <p class="text-slate-600">Strategies for maintaining complete data sovereignty and control across all deployment environments.</p>
+      </div>
+      <div class="group p-8 rounded-2xl border border-slate-200 bg-white hover:border-orange-500/50 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center font-bold mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">5</div>
+        <h3 class="font-semibold text-slate-900 text-lg mb-2">Live Demo Highlights</h3>
+        <p class="text-slate-600">See Zero-Trust deployments, centralized policy enforcement, and real-time reporting & visibility in action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTERS (dark section for visual contrast) -->
+<section class="px-6 py-24 bg-navy-900 text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-xs font-bold uppercase tracking-widest text-orange-500 mb-4">Presented By</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold mb-4">A Joint Session</h2>
+    <p class="text-lg text-navy-100 max-w-2xl mx-auto mb-14">Industry leaders in open-source infrastructure and enterprise network security, together in one session.</p>
+    <div class="grid sm:grid-cols-2 gap-8">
+      <div class="p-8 rounded-2xl bg-white/90 backdrop-blur-sm border border-white text-left shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="mb-6">
+          <img src="images/thomas-krenn-logo-dark.svg" alt="Thomas Krenn — IT's people business" class="h-14 w-auto" />
+        </div>
+        <p class="text-slate-700 font-medium">Leading IT infrastructure provider specializing in customized server solutions, delivering performance and reliability for enterprise environments.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-white/90 backdrop-blur-sm border border-white text-left shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="mb-6">
+          <img src="images/zenarmor-logo-type-basic.png" alt="Zenarmor" class="h-14 w-auto" />
+        </div>
+        <p class="text-slate-700 font-medium">The lightweight, all-software, instant firewall that brings enterprise-grade network security to the open-source platforms you already trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION FORM (HUBSPOT PLACEHOLDER) -->
+<section id="register" class="px-6 py-24" style="background: linear-gradient(180deg, #f8fafc 0%, #eef0fb 50%, #f8fafc 100%);">
+  <div class="max-w-xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-semibold text-slate-900 mb-4">Watch the On-Demand Webinar</h2>
+      <p class="text-slate-600">Fill out the form below to get instant access to the recording and slides.</p>
+    </div>
+    
+    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-lg relative min-h-[400px] flex items-center justify-center">
+      <!-- 
+        ========================================================================
+        HUBSPOT FORM PLACEHOLDER 
+        Integrate the HubSpot embed code below this comment.
+        Ensure form submit is configured to redirect to /thank-you/index.html
+        ========================================================================
+      -->
+      <div id="hubspot-form" class="text-center w-full">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-50 text-orange-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        </div>
+        <h3 class="text-lg font-medium text-slate-900 mb-2">[HubSpot Form Loads Here]</h3>
+        <p class="text-sm text-slate-500 max-w-sm mx-auto">Marketing team: Please embed the HubSpot form script inside this container div.</p>
+        
+        <!-- DEV PREVIEW HELPER: Remove this button in production -->
+        <div class="mt-8 pt-6 border-t border-slate-100">
+          <p class="text-xs text-slate-400 mb-3 uppercase tracking-wider">Dev Preview Bypass</p>
+          <a href="thank-you/index.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-slate-100 text-slate-600 text-sm font-medium hover:bg-slate-200 transition">Go to Thank-You Page</a>
+        </div>
+      </div>
+      <!-- ======================================================================== -->
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="px-6 py-20 bg-white border-t border-slate-100">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Recognized By</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+      <a href="https://www.zenarmor.com/announcements#zenarmor-wins-tmcnet-zero-trust-security-excellence-award" target="_blank" rel="noopener" class="bg-navy-900 rounded-lg py-6 px-4 border border-navy-800 flex flex-col items-center justify-start gap-4 hover:shadow-lg hover:border-orange-500/60 transition">
+        <img src="images/tmc-ribbon-logo.webp" alt="TMCnet Zero Trust Security Excellence Award" class="h-14 w-auto object-contain" />
+        <span class="text-xs text-white font-semibold text-center leading-snug">TMCnet Zero Trust Security Excellence Award</span>
+      </a>
+      <a href="https://www.zenarmor.com/announcements#EMA-names-Zenarmor-a-Vendor-to-Watch" target="_blank" rel="noopener" class="bg-navy-900 rounded-lg py-6 px-4 border border-navy-800 flex flex-col items-center justify-start gap-4 hover:shadow-lg hover:border-orange-500/60 transition">
+        <img src="images/ema-ribbon-logo.webp" alt="EMA Vendor to Watch" class="h-14 w-auto object-contain" />
+        <span class="text-xs text-white font-semibold text-center leading-snug">&ldquo;Vendor to Watch&rdquo; in Network Security</span>
+      </a>
+      <a href="https://www.zenarmor.com/announcements#zenarmor-named-finalist-2026-sc-awards-best-sase-solution" target="_blank" rel="noopener" class="bg-navy-900 rounded-lg py-6 px-4 border border-navy-800 flex flex-col items-center justify-start gap-4 hover:shadow-lg hover:border-orange-500/60 transition">
+        <img src="images/sc-ribbon-logo.webp" alt="2026 SC Awards Best SASE Solution Finalist" class="h-14 w-auto object-contain" />
+        <span class="text-xs text-white font-semibold text-center leading-snug">2026 Finalist &mdash; Best SASE Solution</span>
+      </a>
+      <div class="bg-navy-900 rounded-lg py-6 px-4 border border-navy-800 flex flex-col items-center justify-start gap-4">
+        <img src="images/NCA.jpg" alt="Network Computing Awards 2026 Finalist" class="h-14 w-auto object-contain" />
+        <span class="text-xs text-white font-semibold text-center leading-snug">Network Computing Awards 2026 Finalist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-sm text-slate-500 border-t border-slate-100">
+  © Zenarmor
+</footer>
+
+</body>
+</html>
